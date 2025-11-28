@@ -204,6 +204,7 @@
             Controls.Add(txtStudentID);
             Name = "FrmUpdateMember";
             Text = "FrmUpdateMember";
+            Load += FrmUpdateMember_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -16,5 +16,10 @@ namespace SQL_Select__Insert__and_Update
         {
             InitializeComponent();
         }
+
+        private void FrmUpdateMember_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

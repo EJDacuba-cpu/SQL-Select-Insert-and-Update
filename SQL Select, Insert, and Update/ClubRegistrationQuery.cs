@@ -70,9 +70,32 @@ MiddleName, string LastName, int Age, string Gender, string Program)
  sqlConnect.Close();
  return true;
 }
+      
+        
+                public bool UpdateMember(int ID, long StudentID, string FirstName, string
+MiddleName, string LastName, int Age, string Gender, string Program)
+        {
+            sqlCommand = new SqlCommand("UPDATE ClubMembers SET StudentID=@SID ,FirstName=@F, MiddleName=@M, LastName=@L, Age=@A, Gender= @G, Program=@P)", sqlConnect);
+            sqlCommand.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
+            sqlCommand.Parameters.Add("@RegistrationID", SqlDbType.BigInt).Value = StudentID;
+            sqlCommand.Parameters.Add("@SID", SqlDbType.VarChar).Value = StudentID;
+            sqlCommand.Parameters.Add("@F", SqlDbType.VarChar).Value = FirstName;
+            sqlCommand.Parameters.Add("@M", SqlDbType.VarChar).Value = MiddleName;
+            sqlCommand.Parameters.Add("@L", SqlDbType.VarChar).Value = LastName;
+            sqlCommand.Parameters.Add("@A", SqlDbType.Int).Value = Age;
+            sqlCommand.Parameters.Add("@G", SqlDbType.VarChar).Value = Gender;
+            sqlCommand.Parameters.Add("@P", SqlDbType.VarChar).Value = Program;
+            sqlConnect.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlConnect.Close();
+            return true;
 
+        }
+       
+
+        }
     }
-}
+
 
 
 

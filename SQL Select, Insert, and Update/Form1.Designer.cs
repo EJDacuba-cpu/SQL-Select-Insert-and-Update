@@ -197,6 +197,7 @@
             btnRegister.TabIndex = 17;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnUpdate
             // 
@@ -206,6 +207,7 @@
             btnUpdate.TabIndex = 18;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnRefresh
             // 
@@ -215,6 +217,7 @@
             btnRefresh.TabIndex = 19;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // dataGridView1
             // 
@@ -248,7 +251,6 @@
             Controls.Add(txtLastName);
             Controls.Add(label1);
             Controls.Add(txtStudentID);
-            Cursor = Cursors.Arrow;
             Name = "FrmClubRegistration";
             Text = "Form1";
             Load += FrmClubRegistration_Load;
