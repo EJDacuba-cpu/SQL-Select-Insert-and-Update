@@ -39,8 +39,8 @@
             label5 = new Label();
             txtMiddleName = new TextBox();
             label6 = new Label();
-            cmbGender = new ComboBox();
-            cmbProgram = new ComboBox();
+            cbGender = new ComboBox();
+            txtProgram = new ComboBox();
             label7 = new Label();
             label8 = new Label();
             btnRegister = new Button();
@@ -57,6 +57,7 @@
             txtStudentID.Name = "txtStudentID";
             txtStudentID.Size = new Size(171, 23);
             txtStudentID.TabIndex = 0;
+            txtStudentID.TextChanged += txtStudentID_TextChanged;
             // 
             // label1
             // 
@@ -139,6 +140,7 @@
             txtMiddleName.Name = "txtMiddleName";
             txtMiddleName.Size = new Size(171, 23);
             txtMiddleName.TabIndex = 9;
+            txtMiddleName.TextChanged += txtMiddleName_TextChanged;
             // 
             // label6
             // 
@@ -150,23 +152,24 @@
             label6.TabIndex = 11;
             label6.Text = "Gender";
             // 
-            // cmbGender
+            // cbGender
             // 
-            cmbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            cmbGender.FormattingEnabled = true;
-            cmbGender.Location = new Point(327, 214);
-            cmbGender.Name = "cmbGender";
-            cmbGender.Size = new Size(192, 23);
-            cmbGender.TabIndex = 13;
+            cbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            cbGender.FormattingEnabled = true;
+            cbGender.Location = new Point(327, 214);
+            cbGender.Name = "cbGender";
+            cbGender.Size = new Size(192, 23);
+            cbGender.TabIndex = 13;
             // 
-            // cmbProgram
+            // txtProgram
             // 
-            cmbProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            cmbProgram.FormattingEnabled = true;
-            cmbProgram.Location = new Point(525, 54);
-            cmbProgram.Name = "cmbProgram";
-            cmbProgram.Size = new Size(192, 23);
-            cmbProgram.TabIndex = 15;
+            txtProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtProgram.FormattingEnabled = true;
+            txtProgram.Location = new Point(525, 54);
+            txtProgram.Name = "txtProgram";
+            txtProgram.Size = new Size(192, 23);
+            txtProgram.TabIndex = 15;
+            txtProgram.SelectedIndexChanged += cmbProgram_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -191,9 +194,9 @@
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(808, 78);
+            btnRegister.Location = new Point(771, 72);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(127, 42);
+            btnRegister.Size = new Size(142, 37);
             btnRegister.TabIndex = 17;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
@@ -201,9 +204,9 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(808, 169);
+            btnUpdate.Location = new Point(771, 125);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(127, 42);
+            btnUpdate.Size = new Size(142, 37);
             btnUpdate.TabIndex = 18;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -211,9 +214,9 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(823, 422);
+            btnRefresh.Location = new Point(771, 398);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(127, 42);
+            btnRefresh.Size = new Size(142, 37);
             btnRefresh.TabIndex = 19;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -221,25 +224,28 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(29, 321);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(772, 238);
+            dataGridView1.Size = new Size(688, 238);
             dataGridView1.TabIndex = 20;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // FrmClubRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(962, 571);
             Controls.Add(dataGridView1);
             Controls.Add(btnRefresh);
             Controls.Add(btnUpdate);
             Controls.Add(btnRegister);
             Controls.Add(label8);
-            Controls.Add(cmbProgram);
+            Controls.Add(txtProgram);
             Controls.Add(label7);
-            Controls.Add(cmbGender);
+            Controls.Add(cbGender);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(txtMiddleName);
@@ -251,8 +257,9 @@
             Controls.Add(txtLastName);
             Controls.Add(label1);
             Controls.Add(txtStudentID);
+            ForeColor = SystemColors.ControlText;
             Name = "FrmClubRegistration";
-            Text = "Form1";
+            Text = "FrmClubRegistration";
             Load += FrmClubRegistration_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -272,8 +279,8 @@
         private Label label5;
         private TextBox txtMiddleName;
         private Label label6;
-        private ComboBox cmbGender;
-        private ComboBox cmbProgram;
+        private ComboBox cbGender;
+        private ComboBox txtProgram;
         private Label label7;
         private Label label8;
         private Button btnRegister;

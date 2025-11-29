@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cmbProgram = new ComboBox();
+            txtProgram = new ComboBox();
             label7 = new Label();
-            cmbGender = new ComboBox();
+            cbGender = new ComboBox();
             label6 = new Label();
             label5 = new Label();
             txtMiddleName = new TextBox();
@@ -41,18 +41,19 @@
             label2 = new Label();
             txtLastName = new TextBox();
             label1 = new Label();
-            txtStudentID = new TextBox();
             btnConfirm = new Button();
+            cbStudentId = new ComboBox();
             SuspendLayout();
             // 
-            // cmbProgram
+            // txtProgram
             // 
-            cmbProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            cmbProgram.FormattingEnabled = true;
-            cmbProgram.Location = new Point(63, 421);
-            cmbProgram.Name = "cmbProgram";
-            cmbProgram.Size = new Size(183, 23);
-            cmbProgram.TabIndex = 29;
+            txtProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtProgram.FormattingEnabled = true;
+            txtProgram.Items.AddRange(new object[] { "BS Hospitality Management", "BS Tourism Management", "BS Information Technology" });
+            txtProgram.Location = new Point(63, 421);
+            txtProgram.Name = "txtProgram";
+            txtProgram.Size = new Size(183, 23);
+            txtProgram.TabIndex = 29;
             // 
             // label7
             // 
@@ -64,14 +65,15 @@
             label7.TabIndex = 28;
             label7.Text = "Program";
             // 
-            // cmbGender
+            // cbGender
             // 
-            cmbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            cmbGender.FormattingEnabled = true;
-            cmbGender.Location = new Point(63, 343);
-            cmbGender.Name = "cmbGender";
-            cmbGender.Size = new Size(183, 23);
-            cmbGender.TabIndex = 27;
+            cbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            cbGender.FormattingEnabled = true;
+            cbGender.Items.AddRange(new object[] { "Male", "Female" });
+            cbGender.Location = new Point(63, 343);
+            cbGender.Name = "cbGender";
+            cbGender.Size = new Size(183, 23);
+            cbGender.TabIndex = 27;
             // 
             // label6
             // 
@@ -165,14 +167,6 @@
             label1.TabIndex = 17;
             label1.Text = "Student ID:";
             // 
-            // txtStudentID
-            // 
-            txtStudentID.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            txtStudentID.Location = new Point(63, 56);
-            txtStudentID.Name = "txtStudentID";
-            txtStudentID.Size = new Size(183, 23);
-            txtStudentID.TabIndex = 16;
-            // 
             // btnConfirm
             // 
             btnConfirm.Location = new Point(75, 568);
@@ -181,16 +175,28 @@
             btnConfirm.TabIndex = 30;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // cbStudentId
+            // 
+            cbStudentId.FormattingEnabled = true;
+            cbStudentId.Items.AddRange(new object[] { "BS Hospitality Management", "BS Tourism Management", "BS Information Technology" });
+            cbStudentId.Location = new Point(63, 56);
+            cbStudentId.Name = "cbStudentId";
+            cbStudentId.Size = new Size(183, 23);
+            cbStudentId.TabIndex = 31;
+            cbStudentId.SelectedIndexChanged += cmbStudentId_SelectedIndexChanged;
             // 
             // FrmUpdateMember
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(300, 634);
+            Controls.Add(cbStudentId);
             Controls.Add(btnConfirm);
-            Controls.Add(cmbProgram);
+            Controls.Add(txtProgram);
             Controls.Add(label7);
-            Controls.Add(cmbGender);
+            Controls.Add(cbGender);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(txtMiddleName);
@@ -201,7 +207,6 @@
             Controls.Add(label2);
             Controls.Add(txtLastName);
             Controls.Add(label1);
-            Controls.Add(txtStudentID);
             Name = "FrmUpdateMember";
             Text = "FrmUpdateMember";
             Load += FrmUpdateMember_Load;
@@ -209,11 +214,16 @@
             PerformLayout();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         #endregion
 
-        private ComboBox cmbProgram;
+        private ComboBox txtProgram;
         private Label label7;
-        private ComboBox cmbGender;
+        private ComboBox cbGender;
         private Label label6;
         private Label label5;
         private TextBox txtMiddleName;
@@ -224,7 +234,8 @@
         private Label label2;
         private TextBox txtLastName;
         private Label label1;
-        private TextBox txtStudentID;
         private Button btnConfirm;
+        private ComboBox cbStudentId;
     }
+
 }
