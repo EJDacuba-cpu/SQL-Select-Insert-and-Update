@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             txtStudentID = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -63,6 +64,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(129, 36);
             label1.Name = "label1";
             label1.Size = new Size(71, 15);
@@ -73,6 +75,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(129, 107);
             label2.Name = "label2";
             label2.Size = new Size(68, 15);
@@ -91,6 +94,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(129, 196);
             label3.Name = "label3";
             label3.Size = new Size(29, 15);
@@ -109,6 +113,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(327, 107);
             label4.Name = "label4";
             label4.Size = new Size(70, 15);
@@ -126,7 +131,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(525, 107);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
@@ -146,6 +153,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
             label6.Location = new Point(327, 196);
             label6.Name = "label6";
             label6.Size = new Size(49, 15);
@@ -154,6 +162,7 @@
             // 
             // cbGender
             // 
+            cbGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             cbGender.FormattingEnabled = true;
             cbGender.Location = new Point(327, 214);
@@ -163,6 +172,7 @@
             // 
             // txtProgram
             // 
+            txtProgram.DropDownStyle = ComboBoxStyle.DropDownList;
             txtProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             txtProgram.FormattingEnabled = true;
             txtProgram.Location = new Point(525, 54);
@@ -174,7 +184,9 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(525, 36);
             label7.Name = "label7";
             label7.Size = new Size(55, 15);
@@ -185,6 +197,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ActiveCaptionText;
             label8.Location = new Point(29, 301);
             label8.Name = "label8";
             label8.Size = new Size(127, 17);
@@ -194,38 +207,54 @@
             // 
             // btnRegister
             // 
+            btnRegister.BackColor = Color.GreenYellow;
+            btnRegister.ForeColor = SystemColors.ActiveCaptionText;
             btnRegister.Location = new Point(771, 72);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(142, 37);
             btnRegister.TabIndex = 17;
             btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
             // 
             // btnUpdate
             // 
+            btnUpdate.BackColor = Color.IndianRed;
+            btnUpdate.ForeColor = SystemColors.ActiveCaptionText;
             btnUpdate.Location = new Point(771, 125);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(142, 37);
             btnUpdate.TabIndex = 18;
             btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // btnRefresh
             // 
+            btnRefresh.BackColor = Color.PaleTurquoise;
+            btnRefresh.ForeColor = Color.Black;
             btnRefresh.Location = new Point(771, 398);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(142, 37);
             btnRefresh.TabIndex = 19;
             btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.GridColor = Color.MediumTurquoise;
             dataGridView1.Location = new Point(29, 321);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(688, 238);
@@ -257,7 +286,7 @@
             Controls.Add(txtLastName);
             Controls.Add(label1);
             Controls.Add(txtStudentID);
-            ForeColor = SystemColors.ControlText;
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "FrmClubRegistration";
             Text = "FrmClubRegistration";
             Load += FrmClubRegistration_Load;

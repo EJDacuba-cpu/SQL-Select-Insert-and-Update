@@ -47,7 +47,9 @@
             // 
             // txtProgram
             // 
+            txtProgram.DropDownStyle = ComboBoxStyle.DropDownList;
             txtProgram.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtProgram.ForeColor = SystemColors.InfoText;
             txtProgram.FormattingEnabled = true;
             txtProgram.Items.AddRange(new object[] { "BS Hospitality Management", "BS Tourism Management", "BS Information Technology" });
             txtProgram.Location = new Point(63, 421);
@@ -59,6 +61,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(63, 403);
             label7.Name = "label7";
             label7.Size = new Size(55, 15);
@@ -67,7 +70,9 @@
             // 
             // cbGender
             // 
+            cbGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cbGender.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            cbGender.ForeColor = SystemColors.InfoText;
             cbGender.FormattingEnabled = true;
             cbGender.Items.AddRange(new object[] { "Male", "Female" });
             cbGender.Location = new Point(63, 343);
@@ -79,6 +84,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
             label6.Location = new Point(63, 325);
             label6.Name = "label6";
             label6.Size = new Size(49, 15);
@@ -89,6 +95,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(63, 472);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
@@ -98,6 +105,7 @@
             // txtMiddleName
             // 
             txtMiddleName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtMiddleName.ForeColor = SystemColors.InfoText;
             txtMiddleName.Location = new Point(63, 490);
             txtMiddleName.Name = "txtMiddleName";
             txtMiddleName.Size = new Size(183, 23);
@@ -107,6 +115,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(63, 250);
             label4.Name = "label4";
             label4.Size = new Size(70, 15);
@@ -116,6 +125,7 @@
             // txtFirstName
             // 
             txtFirstName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtFirstName.ForeColor = SystemColors.InfoText;
             txtFirstName.Location = new Point(63, 268);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(183, 23);
@@ -125,6 +135,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(63, 185);
             label3.Name = "label3";
             label3.Size = new Size(29, 15);
@@ -134,6 +145,7 @@
             // txtAge
             // 
             txtAge.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtAge.ForeColor = SystemColors.InfoText;
             txtAge.Location = new Point(63, 203);
             txtAge.Name = "txtAge";
             txtAge.Size = new Size(183, 23);
@@ -143,6 +155,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(63, 109);
             label2.Name = "label2";
             label2.Size = new Size(68, 15);
@@ -152,6 +165,7 @@
             // txtLastName
             // 
             txtLastName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            txtLastName.ForeColor = SystemColors.InfoText;
             txtLastName.Location = new Point(63, 127);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(183, 23);
@@ -161,6 +175,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(63, 38);
             label1.Name = "label1";
             label1.Size = new Size(71, 15);
@@ -169,16 +184,19 @@
             // 
             // btnConfirm
             // 
+            btnConfirm.BackColor = Color.GreenYellow;
             btnConfirm.Location = new Point(75, 568);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(114, 32);
             btnConfirm.TabIndex = 30;
             btnConfirm.Text = "Confirm";
-            btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.UseVisualStyleBackColor = false;
             btnConfirm.Click += btnConfirm_Click;
             // 
             // cbStudentId
             // 
+            cbStudentId.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbStudentId.ForeColor = SystemColors.InfoText;
             cbStudentId.FormattingEnabled = true;
             cbStudentId.Items.AddRange(new object[] { "BS Hospitality Management", "BS Tourism Management", "BS Information Technology" });
             cbStudentId.Location = new Point(63, 56);
